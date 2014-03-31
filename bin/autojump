@@ -400,7 +400,7 @@ def main(args):  # noqa
                         find_matches(entries, tab_needle)))
         else:
             print_local(first(chain(
-                    imap(attrgetter('path'), find_matches(entries, needles)),
+                    imap(attrgetter('path'), find_matches(entries, [ tab_needle ])),
                     # always return a path to calling shell functions
                     ['.'])))
 
