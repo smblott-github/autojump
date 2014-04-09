@@ -397,7 +397,7 @@ def main(args):  # noqa
             print_local(
                     get_ith_path(
                         tab_index,
-                        find_matches(entries, tab_needle)))
+                        find_matches(entries, [tab_needle])))
         else:
             TAB_SEPARATOR_LENGTH = len(TAB_SEPARATOR)
             clean_needles = [ (needle[:-TAB_SEPARATOR_LENGTH] if needle.endswith(TAB_SEPARATOR) else needle) for needle in needles ]
